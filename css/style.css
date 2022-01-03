@@ -129,6 +129,10 @@ h4 {
   color: #fff;
 }
 
+.panel-img {
+  max-height: 250px;
+}
+
 .navbar {
   margin-bottom: 0;
   background-color: #f4511e;
@@ -208,6 +212,10 @@ footer .glyphicon {
   .btn-lg {
     width: 100%;
     margin-bottom: 35px;
+  }
+
+  .panel-img {
+    max-width: 100%;
   }
 }
 
