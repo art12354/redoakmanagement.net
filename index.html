@@ -6,61 +6,64 @@
   <title>Red Oak Management</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="script/formSubmit.js"></script>
 </head>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="60">
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark p-0">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#myPage">RO</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#pricing">PROPERTIES</a></li>
-          <li><a href="#services">TENANTS</a></li>
+      <a class="navbar-brand p-0" href="#myPage">RO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon text-white"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#about" class="nav-link ps-2">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a href="#properties" class="nav-link ps-2">PROPERTIES</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tenants" class="nav-link ps-2">TENANTS</a>
+          </li>
           <!--<li><a href="#portfolio">PORTFOLIO</a></li>-->
-          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#contact" class="nav-link ps-2">CONTACT</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="jumbotron text-center">
-    <h1>Red Oak Management</h1>
-    <p>We are a small rental company with big ideas</p>
+  <div class="container-fluid py-5 text-white bg-red text-center">
+    <div class="container-fluid py-5">
+      <h1>Red Oak Management</h1>
+      <p>We are a small rental company with big ideas</p>
+    </div>
     <form>
       <div class="input-group">
         <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-        <div class="input-group-btn">
           <button type="button" class="btn btn-danger">Subscribe</button>
-        </div>
       </div>
     </form>
   </div>
 
   <!-- Container (About Section) -->
-  <div id="about" class="container-fluid">
+  <div id="about" class="container-fluid bg-white">
     <div class="row">
       <div class="col-sm-8">
         <h2>Company History</h2><br>
         <h4>Our company has been doing business in and around Dane County, Wisconsin, since 2002. We are dedicated to meeting your needs. To accomplish this goal, our properties are maintained at the highest standard possible.</h4>
         <br>
         <p>We fully comply with federal fair housing laws and do not discriminate on the basis of race, color, national origin, familial status (including age), disability, or sex.</p>
-        <br><a href="#contact"><button class="btn btn-default btn-lg">Get in Touch</button></a>
+        <br><a href="#contact"><button class="btn btn-lg btn-red">Get in Touch</button></a>
       </div>
       <div class="col-sm-4">
         <!--<span class="glyphicon glyphicon-home logo"></span>-->
@@ -84,12 +87,42 @@
   </div>
 
   <!-- Container (Pricing Section) -->
-  <div id="pricing" class="container-fluid bg-grey">
+  <div id="properties" class="container-fluid bg-white">
     <div class="text-center">
       <h2>Properties</h2>
       <h4>Find a home that works for you</h4>
     </div>
-    <div class="row slideanim">
+    <div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
+      <div class="col slideanim">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <img src="images/crawford.jpg" alt="crawford drive front image" class="card-img-top ">
+          <div class="card-body">
+            <h2 class="card-title">Crawford Drive</h2>
+            <h5 class="card-subtitle">$1,400</h5>
+            <p class="card-text">per month</p>
+            <button type="button" class="w-100 btn btn-lg btn-red">More Info</button>
+          </div>
+          <div class="card-footer">
+            <h4 class="alert alert-warning">Not Available</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col slideanim">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <img src="images/clover.jpg" alt="north clover lane front image" class="card-img-top">
+          <div class="card-body">
+            <h2 class="card-title">North Clover Lane</h2>
+            <h5 class="card-subtitle">$1,450</h5>
+            <p class="card-text">per month</p>
+            <button type="button" class="w-100 btn btn-lg btn-red">More Info</button>
+          </div>
+          <div class="card-footer">
+            <h4 class="alert alert-warning">Not Available</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--<div class="row slideanim">
       <div class="col-sm-1"></div>
       <div class="col-sm-4 col-xs-12">
         <div class="panel panel-default text-center">
@@ -125,7 +158,7 @@
         </div>
       </div>
       <div class="col-sm-1"></div>
-      <!--<div class="col-sm-4 col-xs-12">
+      <div class="col-sm-4 col-xs-12">
         <div class="panel panel-default text-center">
           <div class="panel-heading">
             <h1>Premium</h1>
@@ -143,12 +176,12 @@
             <button class="btn btn-lg">More Info</button>
           </div>
         </div>
-      </div>-->
-    </div>
+      </div>
+    </div>-->
   </div>
 
   <!-- Container (Services Section) -->
-  <div id="services" class="container-fluid text-center">
+  <div id="tenants" class="container-fluid text-center bg-grey">
     <h2>What we look for in a tenant</h2>
     <h4>Understanding what we look for in a renter will help you in all stages of the application process.</h4>
     <br>
@@ -252,37 +285,41 @@
   </div>-->
 
   <!-- Container (Contact Section) -->
-  <div id="contact" class="container-fluid bg-grey">
+  <div id="contact" class="container-fluid bg-white">
     <h2 class="text-center">CONTACT</h2>
     <div class="row">
       <div class="col-sm-5">
         <p>For an Appointment, Application and Complete Instructions</p>
         <!--<p><span class="glyphicon glyphicon-map-marker"></span> Madison, WI</p>
         <p><span class="glyphicon glyphicon-phone"></span> +1 1515151515</p>-->
-        <p><a href="mailto:vcrussell1@gmail.com" style="color: #f4511e"><span class="glyphicon glyphicon-envelope"></span>  vcrussell1@gmail.com</a></p>
+        <a href="mailto:vcrussell1@gmail.com" style="color: #f4511e; text-decoration: none;" class="d-flex">
+          <i class="material-icons me-1">email</i>
+          <p>vcrussell1@gmail.com</p>
+        </a>
       </div>
-      <div class="col-sm-7 slideanim">
-        <div class="row">
-          <div class="col-sm-6 form-group">
+      <form class="col-sm-7 slideanim needs-validation" id="contact-form" novalidate>
+        <div class="row pb-1">
+          <div class="col-sm-6 mb-1 mb-sm-0 form-group">
             <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
           </div>
           <div class="col-sm-6 form-group">
             <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
           </div>
         </div>
-        <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5"></textarea><br>
+        <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5" required></textarea><br>
         <div class="row">
           <div class="col-sm-12 form-group">
-            <button class="btn btn-default pull-right" type="submit">Send</button>
+            <!--<button class="btn btn-default pull-right" type="submit" onClick="formSubmit(event)">Send</button>-->
+            <button class="btn btn-red w-100" type="submit">Send</button>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 
-  <footer class="container-fluid text-center">
+  <footer class="container-fluid text-center bg-grey">
     <a href="#myPage" title="To Top">
-      <span class="glyphicon glyphicon-chevron-up"></span>
+      <i class="material-icons" style="font-size:36px; color: #f4511e;">keyboard_arrow_up</i>
     </a>
   </footer>
 
